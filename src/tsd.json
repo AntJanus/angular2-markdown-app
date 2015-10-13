@@ -16,6 +16,9 @@
     },
     "rx/rx-lite.d.ts": {
       "commit": "30daf61172ff7160cb191fbdca095f5b8e3f752b"
+    },
+    "showdown/showdown.d.ts": {
+      "commit": "14ab703f435375194360cdba3abab61afc879c18"
     }
   }
 }
