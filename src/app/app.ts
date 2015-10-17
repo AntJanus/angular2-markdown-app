@@ -1,5 +1,5 @@
-/// <reference path="../typings/angular2/angular2.d.ts" />
-/// <reference path="../typings/showdown/showdown.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
+
 import 'zone.js';
 import 'reflect-metadata';
 import 'es6-shim';
@@ -16,13 +16,15 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 })
 class MarkdownAppComponent {
   public html: string;
+  private md: any;
 
   constructor() {
     this.html = '';
+    this.md = showdown.Converter();
   }
 
   public updateValue(val) {
-    this.html = val;
+    this.html = this.md.makeHtml(val);
   }
 }
 

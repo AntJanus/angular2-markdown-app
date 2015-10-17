@@ -81,6 +81,7 @@ declare module Showdown {
      * @param callback Applied once to each item (signature here is from forEach in lib.d.ts)
      */
     function forEach<T>(obj: T[], callback: (value: T, index: number, array: T[]) => any): void;
+
 }
 
 declare module "showdown" {
