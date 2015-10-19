@@ -4,9 +4,11 @@ import 'zone.js';
 import 'reflect-metadata';
 import 'es6-shim';
 
-import * as showdown from 'showdown';
+import * as marked from 'marked';
 
 import {Component, View, bootstrap} from 'angular2/angular2';
+
+console.log(marked, 'marked');
 
 @Component({
   selector: 'markdown-app'
@@ -20,11 +22,11 @@ class MarkdownAppComponent {
 
   constructor() {
     this.html = '';
-    this.md = showdown.Converter();
+    this.md = marked;
   }
 
   public updateValue(val) {
-    this.html = this.md.makeHtml(val);
+    this.html = marked.parse(val);
   }
 }
 
