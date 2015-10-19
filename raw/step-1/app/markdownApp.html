@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="one-half col">
+    <textarea #raw-markdown (keyup)="updateValue(rawMarkdown.value)"></textarea>
+  </div>
+  <div class="one-half col">
+    {{ html }}
+  </div>
+</div>
