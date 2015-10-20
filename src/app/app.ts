@@ -6,6 +6,9 @@ import 'es6-shim';
 
 import {Component, View, bootstrap} from 'angular2/angular2';
 
+import * as MarkdownService from './services/markdownService';
+import * as LocalStorageService from './services/localStorageService';
+
 @Component({
   selector: 'markdown-app'
 })
@@ -13,7 +16,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
   templateUrl: '/app/markdownApp.html'
 })
 class MarkdownAppComponent {
-  public html: string;
+  private html: string;
   private md: any;
 
   constructor() {

@@ -3,6 +3,7 @@
     <textarea #raw-markdown (keyup)="updateValue(rawMarkdown.value)"></textarea>
   </div>
   <div class="one-half col">
-    {{ html }}
+    <div inner-html="html">
+    </div>
   </div>
 </div>
