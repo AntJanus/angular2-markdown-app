@@ -1,0 +1,21 @@
+.container {
+  max-width: 800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.col {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.one-half {
+  width: 48%;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 2px;
+  border: 1px solid #333;
+}
