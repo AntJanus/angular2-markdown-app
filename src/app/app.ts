@@ -4,44 +4,30 @@ import 'zone.js';
 import 'reflect-metadata';
 import 'es6-shim';
 
-import {Component, View, bootstrap} from 'angular2/angular2';
+import {Component, View, NgFor, bootstrap} from 'angular2/angular2';
 
-import { MarkdownService } from './services/markdownService';
+import { MarkdownEditorComponent } from './components/editor/editorComponent';
+
 import { LocalStorageService } from './services/localStorageService';
+import { PostService } from './services/postService';
 
 @Component({
-  selector: 'markdown-app',
-  bindings: [MarkdownService]
+  selector: 'markdown-app'
 })
 @View({
-  templateUrl: '/app/markdownApp.html'
+  templateUrl: '/app/markdownApp.html',
+  directives: [NgFor, MarkdownEditorComponent]
 })
 class MarkdownAppComponent {
-  public html: string;
-  public initVal: string;
+  public titles: Array<string>;
 
-  private md: MarkdownService;
-  private localStorage: LocalStorageService;
-  private storageKey: string = 'markdown-app';
-
-  constructor(LocalStorageService: LocalStorageService, MarkdownService: MarkdownService) {
-    this.localStorage = LocalStorageService;
-    this.html = '';
-    this.md = MarkdownService;
-
-    var text = this.localStorage.retrieve(this.storageKey);
-    this.initVal = text ? text.text : '';
-
-    this.updateValue(this.initVal);
+  constructor(PostService: PostService) {
+    this.titles = PostService.getTitles() || [];
   }
 
-  public updateValue(val) {
-    this.html = this.md.convert(val);
-  }
-
-  public save(val) {
-    this.localStorage.store(this.storageKey, { text: val });
+  public addPost(title: string) {
+    this.titles.push(title);
   }
 }
 
-bootstrap(MarkdownAppComponent, [LocalStorageService]);
+bootstrap(MarkdownAppComponent, [LocalStorageService, PostService]);

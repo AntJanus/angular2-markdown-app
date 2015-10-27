@@ -1,9 +1,4 @@
-<div class="container">
-  <div class="one-half col">
-    <textarea #raw-markdown (keyup)="updateValue(rawMarkdown.value)">{{ initVal }}</textarea>
-  </div>
-  <div class="one-half col">
-    <div [inner-html]="html">
-    </div>
-  </div>
+<div *ng-for="#title of titles">
+  <markdown-editor [title]="title"></markdown-editor>
 </div>
+

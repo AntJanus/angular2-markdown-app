@@ -12,3 +12,10 @@
 .one-half {
   width: 48%;
 }
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 2px;
+  border: 1px solid #333;
+}
