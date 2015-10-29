@@ -1,8 +1,14 @@
-<div>
-  <div *ng-for="#title of titles">
-    <markdown-editor [title]="title"></markdown-editor>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div *ng-for="#title of titles">
+        <markdown-editor [title]="title"></markdown-editor>
+      </div>
+      <div class="row">
+        <input #new-post type="text" /><a class="button" (click)="addPost(newPost.value)">Add</a>
+      </div>
+    </div>
   </div>
-  <input #new-post type="text" /><a (click)="addPost(newPost.value)">Add</a>
 </div>
 
 
