@@ -1,0 +1,49 @@
+/*
+ * Buttons
+ *
+ */
+
+.button{
+	display: inline-block;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	border: 0;
+	font-size: @font-size;
+	line-height: @baseline-height;
+	cursor: pointer;
+	background: @base-dark-grey;
+	color: @base-white;
+	text-decoration: none;
+	padding: .25em .75em;
+
+	&.secondary{
+		background: @secondary-color;
+		color: @base-white;
+		&:hover{
+			background: @secondary-color-dark;
+			color: @base-white;
+		}
+	}
+
+	&.main{
+		color: @base-white;
+		background: @main-color;
+		&:hover{
+			background: @main-color-dark;
+		}
+	}
+
+	&:hover{
+		text-decoration: none;
+		color:@base-white;
+		background: @base-dark-grey;
+		box-shadow: 0 0 2px rgba(0,0,0,.2);
+		.animate-all;
+		text-shadow: -1px -1px rgba(0,0,0,.5);
+	}
+
+	&.block{
+		display: block;
+	}
+}
