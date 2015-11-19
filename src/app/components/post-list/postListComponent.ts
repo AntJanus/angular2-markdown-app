@@ -1,6 +1,5 @@
 import { Component, View, NgFor } from 'angular2/angular2';
-
-import { MarkdownEditorComponent } from '../editor/editorComponent';
+import { ROUTER_DIRECTIVES } from 'angular2/router';
 
 import { LocalStorageService } from '../../services/localStorageService';
 import { PostService } from '../../services/postService';
@@ -9,8 +8,8 @@ import { PostService } from '../../services/postService';
   selector: 'post-list'
 })
 @View({
-  templateUrl: '/app/component/post-list/postListComponent.html',
-  directives: [NgFor, MarkdownEditorComponent]
+  templateUrl: '/app/components/post-list/postListComponent.html',
+  directives: [ROUTER_DIRECTIVES, NgFor]
 })
 export class PostListComponent {
   public titles: Array<string>;
