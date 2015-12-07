@@ -73,7 +73,7 @@
 	            selector: 'app'
 	        }),
 	        angular2_1.View({
-	            templateUrl: '/app/app.html',
+	            templateUrl: '/step-4/app/app.html',
 	            directives: [router_1.ROUTER_DIRECTIVES]
 	        }),
 	        router_1.RouteConfig([
@@ -266,7 +266,7 @@
 	if (typeof Symbol !== 'undefined') {
 	  function create(name) {
 	    return Symbol(name);
-	  } 
+	  }
 	} else {
 	  function create(name) {
 	    return '_zone$' + name;
@@ -4044,7 +4044,7 @@
 /* 21 */
 /***/ function(module, exports) {
 
-	
+
 	/**
 	 * isArray
 	 */
@@ -4095,7 +4095,7 @@
 	      /* This will not work in older browsers.
 	       * See https://developer.mozilla.org/en-US/docs/Web/API/window.crypto.getRandomValues
 	       */
-	    
+
 	      _crypto.getRandomValues(bytes);
 	      return bytes;
 	    }
@@ -5134,7 +5134,7 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	/**
 	 * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
 	 * in FIPS 180-2
@@ -37694,7 +37694,7 @@
 	            selector: 'post-list'
 	        }),
 	        angular2_1.View({
-	            templateUrl: '/app/components/post-list/postListComponent.html',
+	            templateUrl: '/step-4/app/components/post-list/postListComponent.html',
 	            directives: [router_1.ROUTER_DIRECTIVES, angular2_1.NgFor]
 	        }), 
 	        __metadata('design:paramtypes', [postService_1.PostService])
@@ -37731,7 +37731,7 @@
 	            selector: 'post'
 	        }),
 	        angular2_1.View({
-	            templateUrl: '/app/components/post/postComponent.html',
+	            templateUrl: '/step-4/app/components/post/postComponent.html',
 	            directives: [editorComponent_1.MarkdownEditorComponent]
 	        }), 
 	        __metadata('design:paramtypes', [router_1.RouteParams])
@@ -37789,7 +37789,7 @@
 	            bindings: [markdownService_1.MarkdownService]
 	        }),
 	        angular2_1.View({
-	            templateUrl: '/app/components/editor/editorComponent.html'
+	            templateUrl: '/step-4/app/components/editor/editorComponent.html'
 	        }), 
 	        __metadata('design:paramtypes', [postService_1.PostService, markdownService_1.MarkdownService])
 	    ], MarkdownEditorComponent);

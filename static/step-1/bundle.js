@@ -99,7 +99,7 @@
 	MarkdownAppComponent = __decorate([(0, _angular2Angular2.Component)({
 	    selector: 'markdown-app'
 	}), (0, _angular2Angular2.View)({
-	    templateUrl: '/app/markdownApp.html'
+	    templateUrl: '/step-1/app/markdownApp.html'
 	}), __metadata('design:paramtypes', [])], MarkdownAppComponent);
 	(0, _angular2Angular2.bootstrap)(MarkdownAppComponent);
 
@@ -282,7 +282,7 @@
 	if (typeof Symbol !== 'undefined') {
 	  function create(name) {
 	    return Symbol(name);
-	  } 
+	  }
 	} else {
 	  function create(name) {
 	    return '_zone$' + name;
@@ -4060,7 +4060,7 @@
 /* 21 */
 /***/ function(module, exports) {
 
-	
+
 	/**
 	 * isArray
 	 */
@@ -4111,7 +4111,7 @@
 	      /* This will not work in older browsers.
 	       * See https://developer.mozilla.org/en-US/docs/Web/API/window.crypto.getRandomValues
 	       */
-	    
+
 	      _crypto.getRandomValues(bytes);
 	      return bytes;
 	    }
@@ -5150,7 +5150,7 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	/**
 	 * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
 	 * in FIPS 180-2
