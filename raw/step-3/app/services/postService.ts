@@ -41,7 +41,7 @@ export class PostService {
   }
 
   public getPosts() {
-    this.posts = this.storage.retrieve(this.storageKey);
+    this.posts = this.storage.retrieve(this.storageKey) || {};
 
     return this.posts;
   }
@@ -51,6 +51,7 @@ export class PostService {
 
     this.posts[title] = post;
 
+    console.log(this.posts, 'posts?');
     this.storage.store(this.storageKey, this.posts);
   }
 
