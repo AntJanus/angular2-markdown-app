@@ -19,8 +19,9 @@ export class MarkdownEditorComponent {
   private md: MarkdownService;
   private postService: PostService;
 
-  afterViewInit() {
+  ngAfterViewInit() {
     var text = this.postService.getPost(this.title);
+
     this.initVal = text || '';
     this.updateValue(this.initVal);
   }
