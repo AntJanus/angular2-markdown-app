@@ -1,9 +1,9 @@
 <div class="container">
   <div class="one-half col">
-    <textarea #raw-markdown (keyup)="updateValue(rawMarkdown.value)">{{ initVal }}</textarea>
+    <textarea #rawMarkdown (keyup)="updateValue(rawMarkdown.value)">{{ initVal }}</textarea>
   </div>
   <div class="one-half col">
-    <div [inner-html]="html">
+    <div [innerHtml]="html">
     </div>
   </div>
 </div>
