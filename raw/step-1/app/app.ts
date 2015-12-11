@@ -1,5 +1,3 @@
-/// <reference path="../typings/tsd.d.ts" />
-
 import 'zone.js';
 import 'reflect-metadata';
 import 'es6-shim';
