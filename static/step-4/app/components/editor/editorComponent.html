@@ -3,13 +3,13 @@
   <h3>{{ title }}</h3>
   <div class="col-6">
     <div class="form-group">
-      <textarea class="block" #raw-markdown (keyup)="updateValue(rawMarkdown.value)">{{ initVal }}</textarea>
+      <textarea class="block" #rawMarkdown (keyup)="updateValue(rawMarkdown.value)">{{ initVal }}</textarea>
     </div>
     <a class="button secondary" (click)="savePost(rawMarkdown.value)">Save</a>
     <a class="button" (click)="deletePost()">Delete</a>
   </div>
   <div class="col-6 last">
-    <div class="preview" [inner-html]="html">
+    <div class="preview" [innerHtml]="html">
     </div>
   </div>
 </div>

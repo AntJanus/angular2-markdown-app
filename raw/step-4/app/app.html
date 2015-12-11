@@ -1,9 +1,9 @@
 <div>
   <div class="nav-container nav-main nav-right">
     <div class="nav">
-      <a [router-link]="['./PostList']" class="nav-title secondary">Markdown App</a>
+      <a [routerLink]="['./PostList']" class="nav-title secondary">Markdown App</a>
       <ul>
-        <li><input #new-post type="text" />
+        <li><input #newPost type="text" />
         <li>
           <a class="button secondary" (click)="addPost(newPost.value)">Add</a>
         </li>

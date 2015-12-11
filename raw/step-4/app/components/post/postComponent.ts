@@ -15,6 +15,6 @@ export class PostComponent {
   public title: string;
 
   constructor(routeParams: RouteParams) {
-    this.title = <string> routeParams.params.name;
+    this.title = <string> routeParams.get('name');
   }
 }
