@@ -1,22 +1,22 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import 'zone.js';
-import 'reflect-metadata';
+import 'angular2/bundles/angular2-polyfills';
 
-import { Component, View, NgFor, bootstrap, provide } from 'angular2/angular2';
+import { Component, View, provide } from 'angular2/core';
+import { NgFor } from 'angular2/common';
+import { bootstrap } from 'angular2/platform/browser';
+
 import { APP_BASE_HREF, ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, RouteParams, Location } from 'angular2/router';
 
-import { LocalStorageService } from './services/localStorageService';
-import { PostService } from './services/postService';
+import { LocalStorageService } from './services/localStorage.service';
+import { PostService } from './services/post.service';
 
 //pages
-import { PostListComponent } from './components/post-list/postListComponent';
-import { PostComponent } from './components/post/postComponent';
+import { PostListComponent } from './components/post-list/postList.component';
+import { PostComponent } from './components/post/post.component';
 
 @Component({
-  selector: 'app'
-})
-@View({
+  selector: 'app',
   templateUrl: '/app/app.html',
   directives: [ROUTER_DIRECTIVES]
 })

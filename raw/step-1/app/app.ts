@@ -1,24 +1,22 @@
-import 'zone.js';
-import 'reflect-metadata';
-import 'es6-shim';
+/// <reference path="../typings/tsd.d.ts" />
 
-import {Component, View, bootstrap} from 'angular2/angular2';
+import 'angular2/bundles/angular2-polyfills';
+
+import { Component } from 'angular2/core';
+import { bootstrap } from 'angular2/platform/browser';
 
 @Component({
-  selector: 'markdown-app'
-})
-@View({
+  selector: 'markdown-app',
   templateUrl: '/app/markdownApp.html'
 })
 class MarkdownAppComponent {
-  public html: string;
+  public html = '';
   private md: any;
 
   constructor() {
-    this.html = '';
   }
 
-  public updateValue(val) {
+  public updateValue(val:string) {
     this.html = val;
   }
 }

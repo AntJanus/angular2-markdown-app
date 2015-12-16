@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <div *ngFor="#title of titles">
-        <a [routerLink]="['/Post', { name: title }]">{{ title }}</a>
+      <div *ng-for="#title of titles">
+        <a [router-link]="['/Post', { name: title }]">{{ title }}</a>
       </div>
       <div class="row">
       </div>

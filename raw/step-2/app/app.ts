@@ -1,20 +1,18 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import 'zone.js';
-import 'reflect-metadata';
-import 'es6-shim';
+import 'angular2/bundles/angular2-polyfills';
 
-import {Component, View, bootstrap} from 'angular2/angular2';
+import { Component } from 'angular2/core';
 
-import { MarkdownService } from './services/markdownService';
-import { LocalStorageService } from './services/localStorageService';
+import { bootstrap } from 'angular2/platform/browser';
+
+import { MarkdownService } from './services/markdown.service';
+import { LocalStorageService } from './services/localStorage.service';
 
 @Component({
   selector: 'markdown-app',
+  templateUrl: '/app/markdownApp.html',
   bindings: [MarkdownService]
-})
-@View({
-  templateUrl: '/app/markdownApp.html'
 })
 class MarkdownAppComponent {
   public html: string;

@@ -5,6 +5,9 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
+    "showdown/showdown.d.ts": {
+      "commit": "14ab703f435375194360cdba3abab61afc879c18"
+    },
     "marked/marked.d.ts": {
       "commit": "af5b8275d1f2b92738b93fddabc461fc20c553a1"
     }
