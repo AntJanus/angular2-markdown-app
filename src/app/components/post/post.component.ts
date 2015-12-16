@@ -1,14 +1,12 @@
-import { Component, View } from 'angular2/angular2';
+import { Component, View } from 'angular2/core';
 
 import { RouteParams } from 'angular2/router';
 
-import { MarkdownEditorComponent } from '../editor/editorComponent';
+import { MarkdownEditorComponent } from '../editor/editor.component';
 
 @Component({
-  selector: 'post'
-})
-@View({
-  templateUrl: '/app/components/post/postComponent.html',
+  selector: 'post',
+  templateUrl: '/app/components/post/post.component.html',
   directives: [MarkdownEditorComponent]
 })
 export class PostComponent {

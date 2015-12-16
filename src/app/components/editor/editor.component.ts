@@ -1,14 +1,12 @@
-import { Component, View, Input, AfterViewInit } from 'angular2/angular2';
+import { Component, View, Input, AfterViewInit } from 'angular2/core';
 
-import { MarkdownService } from '../../services/markdownService';
-import { PostService } from '../../services/postService';
+import { MarkdownService } from '../../services/markdown.service';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'markdown-editor',
-  bindings: [MarkdownService]
-})
-@View({
-  templateUrl: '/app/components/editor/editorComponent.html'
+  bindings: [MarkdownService],
+  templateUrl: '/app/components/editor/editor.component.html'
 })
 export class MarkdownEditorComponent {
   @Input() title: string;

@@ -1,14 +1,14 @@
-import { Component, View, NgFor } from 'angular2/angular2';
+import { Component } from 'angular2/core';
+
+import { NgFor } from 'angular2/common';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
 
-import { LocalStorageService } from '../../services/localStorageService';
-import { PostService } from '../../services/postService';
+import { LocalStorageService } from '../../services/localStorage.service';
+import { PostService } from '../../services/post.service';
 
 @Component({
-  selector: 'post-list'
-})
-@View({
-  templateUrl: '/app/components/post-list/postListComponent.html',
+  selector: 'post-list',
+  templateUrl: '/app/components/post-list/postList.component.html',
   directives: [ROUTER_DIRECTIVES, NgFor]
 })
 export class PostListComponent {

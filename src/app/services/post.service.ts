@@ -1,6 +1,6 @@
-import { Injectable } from 'angular2/angular2';
+import { Injectable } from 'angular2/core';
 
-import { LocalStorageService } from './localStorageService';
+import { LocalStorageService } from './localStorage.service';
 
 @Injectable()
 export class PostService {
