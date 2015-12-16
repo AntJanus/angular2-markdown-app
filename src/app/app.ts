@@ -1,10 +1,11 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import 'reflect-metadata';
-
-import  { bootstrap } from 'angular2/platform/browser';
+import 'angular2/bundles/angular2-polyfills';
 
 import { Component, View, provide } from 'angular2/core';
+import { NgFor } from 'angular2/common';
+import { bootstrap } from 'angular2/platform/browser';
+
 import { APP_BASE_HREF, ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, RouteParams, Location } from 'angular2/router';
 
 import { LocalStorageService } from './services/localStorage.service';

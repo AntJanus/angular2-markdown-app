@@ -1,19 +1,18 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import 'zone.js';
-import 'reflect-metadata';
+import 'angular2/bundles/angular2-polyfills';
 
-import {Component, View, NgFor, bootstrap} from 'angular2/angular2';
+import { Component } from 'angular2/core';
+import { NgFor } from 'angular2/common';
+import { bootstrap } from 'angular2/platform/browser';
 
-import { MarkdownEditorComponent } from './components/editor/editorComponent';
+import { MarkdownEditorComponent } from './components/editor/editor.component';
 
-import { LocalStorageService } from './services/localStorageService';
-import { PostService } from './services/postService';
+import { LocalStorageService } from './services/localStorage.service';
+import { PostService } from './services/post.service';
 
 @Component({
-  selector: 'markdown-app'
-})
-@View({
+  selector: 'markdown-app',
   templateUrl: '/app/markdownApp.html',
   directives: [NgFor, MarkdownEditorComponent]
 })

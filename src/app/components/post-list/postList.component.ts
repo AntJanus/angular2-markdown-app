@@ -1,5 +1,4 @@
 import { Component } from 'angular2/core';
-
 import { NgFor } from 'angular2/common';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
 

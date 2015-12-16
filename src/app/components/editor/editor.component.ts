@@ -1,4 +1,4 @@
-import { Component, View, Input, AfterViewInit } from 'angular2/core';
+import { Component, Input } from 'angular2/core';
 
 import { MarkdownService } from '../../services/markdown.service';
 import { PostService } from '../../services/post.service';
@@ -17,7 +17,7 @@ export class MarkdownEditorComponent {
   private md: MarkdownService;
   private postService: PostService;
 
-  afterViewInit() {
+  ngAfterContentInit() {
     var text = this.postService.getPost(this.title);
     this.initVal = text || '';
     this.updateValue(this.initVal);

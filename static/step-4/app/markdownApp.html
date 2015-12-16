@@ -1,0 +1,8 @@
+<div>
+  <div *ngFor="#title of titles">
+    <markdown-editor [title]="title"></markdown-editor>
+  </div>
+  <input #newPost type="text" /><a (click)="addPost(newPost.value)">Add</a>
+</div>
+
+

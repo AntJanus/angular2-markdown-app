@@ -22,6 +22,10 @@ export class MarkdownService {
   }
 
   convert(markdown: string): string {
+    if(!markdown) {
+      return '';
+    }
+
     return this.md.parse(markdown);
   }
 
