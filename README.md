@@ -1,21 +1,22 @@
-##Angular 2.0 TypeScript starter kit
+##Angular 2.0 Markdown App
 
-###Support
-
-Now working with Angular 2.0-beta-0.
+Follow [the beginner's preemptive guide to Angular2](http://antjanus.com/blog/tutorials/the-beginners-preemptive-guide-to-angularjs-2-alpha/) to learn how to build the markdown application.
 
 ###Installation
 
 Requirements:
 
 - NodeJS
+- npm
 
 Installation:
 
 ```bash
-npm install -g gulp typescript
+npm install -g gulp typescript tsd bower webpack
+npm install
+bower install
 ```
 
-###Usage
+###Starting the app
 
-The starter kit is meant to be used by anyone who wants to get a taste of Angular 2.X apps.
+Run `gulp` and open up `localhost:3001`
